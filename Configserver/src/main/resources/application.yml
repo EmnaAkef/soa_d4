@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  #    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/EmnaAkef/config-repo.git
+          default-label: main
+          clone-on-start: true
+#        native:
+#          search-locations: file///C:/Users/ASUS/IdeaProjects/emna-spring-cloud/config-repo
+#          search-locations: "classpath:/config"
+server:
+  port: 9999
